@@ -1,1 +1,25 @@
-<section></section>
+---
+import Model from "./Model";
+
+export interface Props {
+  modelName: string;
+  title: string;
+  text: string;
+  tags: string[];
+}
+
+const { modelName, title, text, tags } = Astro.props;
+---
+
+<section class="flex flex-col md:flex-row md:h-48">
+  <Model modelName={modelName} client:load />
+  <div>
+    <h1>{title}</h1>
+    <p>
+      {text}
+    </p>
+    <div class="flex space-x-4">
+      {tags.map((tag) => <span class="border rounded">{tag}</span>)}
+    </div>
+  </div>
+</section>
