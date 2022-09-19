@@ -1,9 +1,8 @@
-import { useState, useEffect, useRef, useCallback } from "react";
-import * as THREE from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { SpinnerCircular } from "spinners-react";
+import * as THREE from "three";
+import { OrbitControls } from "../utils/jsm/controls/OrbitControls";
 import { loadGLTFModel } from "../utils/loadGLTFModel";
-import ModalModel from "./ModalModel";
 
 function easeOutCirc(x: number) {
   return Math.sqrt(1 - Math.pow(x - 1, 4));

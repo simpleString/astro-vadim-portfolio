@@ -1,4 +1,4 @@
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { GLTFLoader } from "./jsm/loaders/GLTFLoader";
 
 export function loadGLTFModel(
   scene: THREE.Scene,
