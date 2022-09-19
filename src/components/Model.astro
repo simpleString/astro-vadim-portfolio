@@ -1,13 +1,20 @@
 <div class="h-screen max-w-2xl mx-auto">
   This is a model component
 
-  <div id="container" class="w-full h-full"></div>
+  <div id="container" class="w-96 h-96"></div>
 </div>
 
 <script>
   import * as THREE from "three";
   import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
   import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+
+  window.addEventListener("resize", handlerWindowResize, false);
+
+  function handlerWindowResize() {
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setSize(container.clientWidth, container.clientHeight);
+  }
 
   const container = document.getElementById("container")!;
 
