@@ -1,3 +1,4 @@
+import * as THREE from "three";
 import { GLTFLoader } from "./jsm/loaders/GLTFLoader";
 
 export function loadGLTFModel(
@@ -8,6 +9,8 @@ export function loadGLTFModel(
   const { receiveShadow, castShadow } = options;
   return new Promise((resolve, reject) => {
     const loader = new GLTFLoader();
+
+    THREE.Cache.enabled = true;
 
     loader.load(
       glbPath,
