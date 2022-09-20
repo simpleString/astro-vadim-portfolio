@@ -11,7 +11,7 @@ export interface Props {
 const { modelName, title, text, tags } = Astro.props;
 ---
 
-<section class="flex flex-col md:flex-row md:h-48">
+<section class="flex flex-col md:flex-row">
   <Model modelName={modelName} client:load />
   <div>
     <h1>{title}</h1>

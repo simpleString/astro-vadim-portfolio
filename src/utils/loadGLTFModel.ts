@@ -20,7 +20,7 @@ export function loadGLTFModel(
         obj.castShadow = castShadow;
         scene.add(obj);
 
-        obj.traverse(function (child) {
+        obj.traverse(function (child: any) {
           if (child.isMesh) {
             child.castShadow = castShadow;
             child.receiveShadow = receiveShadow;
